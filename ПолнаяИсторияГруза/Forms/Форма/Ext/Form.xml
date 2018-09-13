@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="30"/>
+			<ChildItems>
+				<InputField name="ОбъектПостроенияИстории" id="1">
+					<DataPath>ОбъектПостроенияИстории</DataPath>
+					<ContextMenu name="ОбъектПостроенияИсторииКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ОбъектПостроенияИсторииРасширеннаяПодсказка" id="3"/>
+					<Events>
+						<Event name="OnChange">ОбъектПостроенияИсторииПриИзменении</Event>
+					</Events>
+				</InputField>
+				<Button name="Сформировать" id="31">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Сформировать</CommandName>
+					<ExtendedTooltip name="СформироватьРасширеннаяПодсказка" id="32"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ПолнаяИсторияГруза" id="4">
+			<Representation>Tree</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>дзПолнаяИсторияГруза</DataPath>
+			<ContextMenu name="ПолнаяИсторияГрузаКонтекстноеМеню" id="5"/>
+			<AutoCommandBar name="ПолнаяИсторияГрузаКоманднаяПанель" id="6"/>
+			<ExtendedTooltip name="ПолнаяИсторияГрузаРасширеннаяПодсказка" id="7"/>
+			<SearchStringAddition name="ПолнаяИсторияГрузаСтрокаПоиска" id="8">
+				<AdditionSource>
+					<Item>ПолнаяИсторияГруза</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПолнаяИсторияГрузаСтрокаПоискаКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="ПолнаяИсторияГрузаСтрокаПоискаРасширеннаяПодсказка" id="10"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПолнаяИсторияГрузаСостояниеПросмотра" id="11">
+				<AdditionSource>
+					<Item>ПолнаяИсторияГруза</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПолнаяИсторияГрузаСостояниеПросмотраКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ПолнаяИсторияГрузаСостояниеПросмотраРасширеннаяПодсказка" id="13"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПолнаяИсторияГрузаУправлениеПоиском" id="14">
+				<AdditionSource>
+					<Item>ПолнаяИсторияГруза</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПолнаяИсторияГрузаУправлениеПоискомКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="ПолнаяИсторияГрузаУправлениеПоискомРасширеннаяПодсказка" id="16"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="дзПолнаяИсторияГрузаОбъект" id="17">
+					<DataPath>дзПолнаяИсторияГруза.Объект</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="дзПолнаяИсторияГрузаОбъектКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="дзПолнаяИсторияГрузаОбъектРасширеннаяПодсказка" id="19"/>
+				</InputField>
+				<InputField name="ПолнаяИсторияГрузаКодГруза" id="36">
+					<DataPath>дзПолнаяИсторияГруза.КодГруза</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПолнаяИсторияГрузаКодГрузаКонтекстноеМеню" id="37"/>
+					<ExtendedTooltip name="ПолнаяИсторияГрузаКодГрузаРасширеннаяПодсказка" id="38"/>
+				</InputField>
+				<InputField name="дзПолнаяИсторияГрузаКоличествоМест" id="20">
+					<DataPath>дзПолнаяИсторияГруза.КоличествоМест</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="дзПолнаяИсторияГрузаКоличествоМестКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="дзПолнаяИсторияГрузаКоличествоМестРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<InputField name="дзПолнаяИсторияГрузаВес" id="23">
+					<DataPath>дзПолнаяИсторияГруза.Вес</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="дзПолнаяИсторияГрузаВесКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="дзПолнаяИсторияГрузаВесРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<CheckBoxField name="дзПолнаяИсторияГрузаПометкаУдаления" id="33">
+					<DataPath>дзПолнаяИсторияГруза.ПометкаУдаления</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="дзПолнаяИсторияГрузаПометкаУдаленияКонтекстноеМеню" id="34"/>
+					<ExtendedTooltip name="дзПолнаяИсторияГрузаПометкаУдаленияРасширеннаяПодсказка" id="35"/>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.ПолнаяИсторияГруза</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="дзПолнаяИсторияГруза" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дз полная история груза</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Объект" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.ВМТП_УстановкаОписанияГруза</v8:Type>
+						<v8:Type>cfg:DocumentRef.ВМТП_ПоручениеНаОтгрузку</v8:Type>
+						<v8:Type>cfg:DocumentRef.ВМТП_ЖДНакладнаяВходящая</v8:Type>
+						<v8:Type>cfg:CatalogRef.СерииНоменклатуры</v8:Type>
+						<v8:Type>cfg:DocumentRef.ВМТП_СтрокаТальманскойРасписки</v8:Type>
+						<v8:Type>cfg:DocumentRef.ВМТП_ФормированиеРасформирование</v8:Type>
+						<v8:Type>cfg:DocumentRef.ВМТП_КоносаментВходящий</v8:Type>
+						<v8:Type>cfg:DocumentRef.ВМТП_ДО2</v8:Type>
+						<v8:Type>cfg:DocumentRef.ВМТП_КоммерческийАкт</v8:Type>
+						<v8:Type>cfg:DocumentRef.ВМТП_ТаможенныйДокумент</v8:Type>
+						<v8:Type>cfg:DocumentRef.ВМТП_ПеремещениеГруза</v8:Type>
+						<v8:Type>cfg:DocumentRef.ВМТП_ЗаявкаНаПеревозку</v8:Type>
+						<v8:Type>cfg:DocumentRef.ВМТП_ДО1</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КоличествоМест" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество мест</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Вес" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вес</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>3</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПометкаУдаления" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка удаления</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КодГруза" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код груза</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ОбъектПостроенияИстории" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект построения истории</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.СерииНоменклатуры</v8:Type>
+				<v8:Type>cfg:DocumentRef.ВМТП_ФормированиеРасформирование</v8:Type>
+				<v8:Type>cfg:DocumentRef.ВМТП_КоносаментВходящий</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Реквизит1" id="4">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>дзПолнаяИсторияГрузаОбъект</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">дзПолнаяИсторияГруза.ПометкаУдаления</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:MistyRose</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="Сформировать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Сформировать</Action>
+		</Command>
+	</Commands>
+</Form>
