@@ -38,11 +38,14 @@
 		<Table name="ПолнаяИсторияГруза" id="4">
 			<Representation>Tree</Representation>
 			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
 			<EnableStartDrag>true</EnableStartDrag>
 			<EnableDrag>true</EnableDrag>
 			<DataPath>дзПолнаяИсторияГруза</DataPath>
 			<ContextMenu name="ПолнаяИсторияГрузаКонтекстноеМеню" id="5"/>
-			<AutoCommandBar name="ПолнаяИсторияГрузаКоманднаяПанель" id="6"/>
+			<AutoCommandBar name="ПолнаяИсторияГрузаКоманднаяПанель" id="6">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
 			<ExtendedTooltip name="ПолнаяИсторияГрузаРасширеннаяПодсказка" id="7"/>
 			<SearchStringAddition name="ПолнаяИсторияГрузаСтрокаПоиска" id="8">
 				<AdditionSource>
@@ -72,26 +75,51 @@
 				<InputField name="дзПолнаяИсторияГрузаОбъект" id="17">
 					<DataPath>дзПолнаяИсторияГруза.Объект</DataPath>
 					<EditMode>EnterOnInput</EditMode>
+					<ShowInFooter>false</ShowInFooter>
 					<ContextMenu name="дзПолнаяИсторияГрузаОбъектКонтекстноеМеню" id="18"/>
 					<ExtendedTooltip name="дзПолнаяИсторияГрузаОбъектРасширеннаяПодсказка" id="19"/>
 				</InputField>
 				<InputField name="ПолнаяИсторияГрузаКодГруза" id="36">
 					<DataPath>дзПолнаяИсторияГруза.КодГруза</DataPath>
 					<EditMode>EnterOnInput</EditMode>
+					<ShowInFooter>false</ShowInFooter>
 					<ContextMenu name="ПолнаяИсторияГрузаКодГрузаКонтекстноеМеню" id="37"/>
 					<ExtendedTooltip name="ПолнаяИсторияГрузаКодГрузаРасширеннаяПодсказка" id="38"/>
 				</InputField>
 				<InputField name="дзПолнаяИсторияГрузаКоличествоМест" id="20">
 					<DataPath>дзПолнаяИсторияГруза.КоличествоМест</DataPath>
 					<EditMode>EnterOnInput</EditMode>
+					<ShowInFooter>false</ShowInFooter>
 					<ContextMenu name="дзПолнаяИсторияГрузаКоличествоМестКонтекстноеМеню" id="21"/>
 					<ExtendedTooltip name="дзПолнаяИсторияГрузаКоличествоМестРасширеннаяПодсказка" id="22"/>
 				</InputField>
 				<InputField name="дзПолнаяИсторияГрузаВес" id="23">
 					<DataPath>дзПолнаяИсторияГруза.Вес</DataPath>
 					<EditMode>EnterOnInput</EditMode>
+					<ShowInFooter>false</ShowInFooter>
 					<ContextMenu name="дзПолнаяИсторияГрузаВесКонтекстноеМеню" id="24"/>
 					<ExtendedTooltip name="дзПолнаяИсторияГрузаВесРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="ПолнаяИсторияГрузаТаможняОборот" id="45">
+					<DataPath>дзПолнаяИсторияГруза.ТаможняОборот</DataPath>
+					<HorizontalAlign>Right</HorizontalAlign>
+					<EditMode>EnterOnInput</EditMode>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<ShowInFooter>false</ShowInFooter>
+					<Width>1</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>1</MaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="ПолнаяИсторияГрузаТаможняОборотКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="ПолнаяИсторияГрузаТаможняОборотРасширеннаяПодсказка" id="47"/>
+				</InputField>
+				<InputField name="ПолнаяИсторияГрузаТаможняОстатки" id="39">
+					<DataPath>дзПолнаяИсторияГруза.ТаможняОстатки</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ShowInFooter>false</ShowInFooter>
+					<ContextMenu name="ПолнаяИсторияГрузаТаможняОстаткиКонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="ПолнаяИсторияГрузаТаможняОстаткиРасширеннаяПодсказка" id="41"/>
 				</InputField>
 				<CheckBoxField name="дзПолнаяИсторияГрузаПометкаУдаления" id="33">
 					<DataPath>дзПолнаяИсторияГруза.ПометкаУдаления</DataPath>
@@ -192,6 +220,36 @@
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Код груза</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТаможняОстатки" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Таможня остатки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТаможняОборот" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>СведенияДО (Мест/Вес)</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
